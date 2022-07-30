@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Search from "./components/Search";
+import styled from "styled-components";
+import { WiDayCloudy } from "react-icons/wi";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <h2>
+        Weather Forecast <WiDayCloudy />
+      </h2>
+      <Search />
+    </Container>
   );
 }
 
+const Container = styled.div`
+  text-align: center;
+  margin-top: 50px;
+  h2 {
+    font-size: 2rem;
+    color: white;
+  }
+`;
 export default App;

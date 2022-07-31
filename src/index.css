@@ -1,5 +1,8 @@
 body{
-    background-image: url("./assets/background.jpg");
+    background-image: url("./assets/sunset.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    
 }

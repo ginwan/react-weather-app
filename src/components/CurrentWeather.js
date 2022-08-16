@@ -1,11 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 import { WiDayCloudy, WiDaySunny, WiDayThunderstorm } from "react-icons/wi";
 import { BsCloudDrizzle, BsFillCloudRainFill, BsSnow2 } from "react-icons/bs";
 
 const CurrentWeather = ({ data }) => {
   return (
-    <Container>
+    <>
       <div className="weather-details">
         <div className="top">
           <div className="loc-temp">
@@ -45,30 +44,8 @@ const CurrentWeather = ({ data }) => {
           </div>
         </div>
       </div>
-    </Container>
+    </>
   );
 };
-
-const Container = styled.div`
-  .bottom {
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    width: 50%;
-    margin: 5.5rem auto;
-    padding: 1rem;
-    border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .top {
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    padding: 0.5rem;
-  }
-  .bold {
-    color: #fff;
-  }
-`;
 
 export default CurrentWeather;

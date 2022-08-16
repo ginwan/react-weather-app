@@ -1,8 +1,143 @@
-body{
-    background-image: url("./assets/sunset.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Cinzel', serif;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+}
+
+.app {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 2rem;
+    color: white;
+}
+
+.title,
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-city {
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 25px;
+    margin-left: 7px;
+    margin-right: 7px;
+    border-radius: 8px;
+    color: #000;
+}
+
+.input-city::placeholder {
+    padding: 50px;
+    color: black;
+    font-size: 1rem;
+}
+
+.top {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 1rem;
+}
+
+.bold {
+    color: #fff;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 50%;
+    margin: 5.5rem auto;
+    padding: 1rem 1rem;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.small-icon {
+    font-size: 3rem;
+}
+
+.day {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: purple;
+    margin-left: 15px;
+    flex: 1 1;
+}
+.description {
+    flex: 1 1;
+    margin-right: 15px;
+    text-align: right;
+    color: black;
+    font-weight: 700;
+}
+
+.min-max {
+    color: blue;
+    font-weight: 700;
+}
+
+.daily-item {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    height: 40px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    padding: 5px 15px;
+    width: 50%;
+    cursor: pointer;
+}
+.daily-class-grid {
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    grid-row-gap: 0;
+    row-gap: 0;
+    grid-column-gap: 0;
+    column-gap: 150px;
+    display: grid;
+    flex: 1 1;
+    grid-template-columns: auto auto;
+    padding: 5px 320px;
+}
+
+.daily-grid-details-item {
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
 }

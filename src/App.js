@@ -1,10 +1,10 @@
 import Search from "./components/Search";
-import styled from "styled-components";
 import { WiDayCloudy } from "react-icons/wi";
 import CurrentWeather from "./components/CurrentWeather";
 import { Weather_API_URL, API_KEY } from "./api";
 import { useState } from "react";
 import Forecast from "./components/Forecast";
+import Background from "./components/Background";
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -35,23 +35,20 @@ function App() {
   console.log(forecast);
 
   return (
-    <Container>
-      <h2>
-        Weather Forecast <WiDayCloudy />
-      </h2>
-      <Search onSearchChange={handleOnSearchChange} />
-      {currentWeather && <CurrentWeather data={currentWeather} />}
-      {forecast && <Forecast data={forecast} />}
-    </Container>
+    <div className="main">
+      <Background />
+      <div className="app">
+        <div className="title">
+          <h2>
+            Weather Forecast <WiDayCloudy />
+          </h2>
+        </div>
+        <Search onSearchChange={handleOnSearchChange} />
+        {currentWeather && <CurrentWeather data={currentWeather} />}
+        {forecast && <Forecast data={forecast} />}
+      </div>
+    </div>
   );
 }
 
-const Container = styled.div`
-  text-align: center;
-  margin-top: 50px;
-  h2 {
-    font-size: 2rem;
-    color: white;
-  }
-`;
 export default App;

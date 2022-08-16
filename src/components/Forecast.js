@@ -6,7 +6,6 @@ import {
   AccordionItemHeading,
   AccordionItemPanel,
 } from "react-accessible-accordion";
-import styled from "styled-components";
 import { WiDayCloudy, WiDaySunny, WiDayThunderstorm } from "react-icons/wi";
 import { BsCloudDrizzle, BsFillCloudRainFill, BsSnow2 } from "react-icons/bs";
 
@@ -27,7 +26,7 @@ const Forecast = ({ data }) => {
     WEEK_DAYS.slice(0, dayInAWeek)
   );
   return (
-    <Container>
+    <>
       <label className="title">Daily Forecast</label>
       <Accordion allowZeroExpanded>
         {data.list.splice(0, 7).map((item, index) => (
@@ -93,80 +92,8 @@ const Forecast = ({ data }) => {
           </AccordionItem>
         ))}
       </Accordion>
-    </Container>
+    </>
   );
 };
-
-const Container = styled.div`
-  .title {
-    color: #fff;
-    font-size: 2em;
-    font-weight: 700;
-  }
-  .small-icon {
-    font-size: 3em;
-  }
-  .day {
-    font-size: 2em;
-    font-weight: 600;
-    color: purple;
-    margin-left: 15px;
-    flex: 1 1;
-  }
-  .description {
-    flex: 1 1;
-    margin-right: 15px;
-    text-align: right;
-  }
-  .min-max {
-    color: blue;
-  }
-  .daily-item {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 15px;
-    height: 40px;
-    margin: 15px;
-    display: flex;
-    align-items: center;
-    align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 14px;
-    padding: 5px 15px;
-    width: 50%;
-    cursor: pointer;
-  }
-  @media only screen and (max-width: 500px) {
-    .daily-item {
-      width: 100%;
-      margin: 15px;
-      align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-  .daily-class-grid {
-    align: center;
-    margin-left: auto;
-    margin-right: auto;
-    color: #fff;
-    grid-row-gap: 0;
-    row-gap: 0;
-    grid-column-gap: 10px;
-    column-gap: 10px;
-    display: grid;
-    flex: 1 1;
-    grid-template-columns: auto auto;
-    padding: 5px 15px;
-  }
-  .daily-grid-details-item {
-    display: flex;
-    height: 30px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .daily-grid-details-item:first-child {
-  }
-`;
 
 export default Forecast;

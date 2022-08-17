@@ -61,6 +61,8 @@ h2 {
     justify-content: space-evenly;
     text-align: center;
     padding: 1rem;
+    /* transform: translateY(50%);
+    transition: transform 1s; */
 }
 
 .bold {

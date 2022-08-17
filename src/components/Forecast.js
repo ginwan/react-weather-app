@@ -7,7 +7,12 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 import { WiDayCloudy, WiDaySunny, WiDayThunderstorm } from "react-icons/wi";
-import { BsCloudDrizzle, BsFillCloudRainFill, BsSnow2 } from "react-icons/bs";
+import {
+  BsCloudDrizzle,
+  BsFillCloudRainFill,
+  BsSnow2,
+  BsFillCloudHazeFill,
+} from "react-icons/bs";
 
 const WEEK_DAYS = [
   "Monday",
@@ -51,6 +56,9 @@ const Forecast = ({ data }) => {
                   )}
                   {item.weather[0].main === "Thunderstorm" && (
                     <WiDayThunderstorm className="small-icon" />
+                  )}
+                  {item.weather[0].main === "Haze" && (
+                    <BsFillCloudHazeFill className="small-icon" />
                   )}
                   <label className="day">{forecastDays[index]}</label>
                   <label className="description">{item.weather[0].main}</label>

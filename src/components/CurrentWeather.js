@@ -1,6 +1,11 @@
 import React from "react";
 import { WiDayCloudy, WiDaySunny, WiDayThunderstorm } from "react-icons/wi";
-import { BsCloudDrizzle, BsFillCloudRainFill, BsSnow2 } from "react-icons/bs";
+import {
+  BsCloudDrizzle,
+  BsFillCloudRainFill,
+  BsSnow2,
+  BsFillCloudHazeFill,
+} from "react-icons/bs";
 
 const CurrentWeather = ({ data }) => {
   return (
@@ -24,6 +29,7 @@ const CurrentWeather = ({ data }) => {
               {data.weather[0].main === "Rain" && <BsFillCloudRainFill />}
               {data.weather[0].main === "Snow" && <BsSnow2 />}
               {data.weather[0].main === "Thunderstorm" && <WiDayThunderstorm />}
+              {data.weather[0].main === "Haze" && <BsFillCloudHazeFill />}
             </h2>
           </div>
         </div>

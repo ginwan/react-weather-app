@@ -6,4 +6,4 @@
 
 - react icon
 
-* [setups] (#npm i react-icons)
+* [setups](#npm i react-icons)

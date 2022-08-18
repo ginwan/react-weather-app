@@ -1,9 +1,25 @@
 # React Weather Forecast App
 
-> web application display the current weather and forecast the next 7 day weather.
+## General info
 
-###### backage use in this application
+Web application display the current weather and forecast the next 7 day weather.
+
+## Packages
 
 - react icon
+- react-select
+- react-select-async-paginate
+- axios
 
-* [setups](#npm i react-icons)
+## install Packages
+
+```
+$ npm i react-icon
+$ npm i react-select
+$ npm i react-select-async-paginate
+$ npm i axios
+```
+
+## Api
+
+Open weather api(https://openweathermap.org/)
